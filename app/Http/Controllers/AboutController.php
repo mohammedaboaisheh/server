@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 use App\About;
+use App\AboutImage;
 use Illuminate\Http\Request;
 use App\Magazine_post;
 class AboutController extends Controller
 {
     public function show() {
         $jobs=About::all();
-        return view('About-Us')->with('jobs',$jobs);
+        $sliders=AboutImage::all();
+        return view('About-Us')->with('jobs',$jobs)->with('sliders',$sliders);
     }
     public function showhome() {
         $chair="CHAIRMAN";

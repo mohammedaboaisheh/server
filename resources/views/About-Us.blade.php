@@ -18,6 +18,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="css/mycss.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>
 
 </head>
 <body>
@@ -60,16 +61,34 @@
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="slider-side">
                     <div class="inner-image">
-                        <img src="images/GradImg.png" class="in-inner-image" alt="">
+                        <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <?php $counter=0?>
+                                @foreach($sliders as $slide)
+                                    <?php $counter++; if($counter==1){?>
+                                <div class="carousel-item active">
+                                    <?php } else {?>
+                                        <div class="carousel-item"><?php }?>
+                                    <img class="d-block w-100"  src= "{{asset('storage/'.$slide->image)}}" alt="{{$slide->image_desc}}">
+                                </div>
+                                @endforeach
+                            </div>
+                        </div>
                     </div>
                     <img src="images/frame.png" alt="" class="responsive">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="talk-side">
-                    <h1 class="q-title">Who We Are ?</h1>
+                    <h1 class="q-title">Who Are We?</h1>
                     <p class="q-body">
-                        The ACM JU is a nonprofit student chapter affiliated to ACM . Our main goal is to make ACM a truly international community for all the people interested in computers and to expand the view of IT students beyond coding by organizing a series of events, talks, training, competitions and other activities.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged. It was
+                        popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                        and more recently with desktop publishing software like Aldus PageMaker including versions of
+                        Lorem Ipsum
                     </p>
                 </div>
             </div>

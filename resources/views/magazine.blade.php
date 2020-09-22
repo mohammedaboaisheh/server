@@ -18,6 +18,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href="css/mycss.css" rel="stylesheet" type="text/css">
+    <script src="js/scripts.js"></script>
+
 </head>
 <body>
 <div class="col-lg-12 col-md-12 col-sm-12">
@@ -30,7 +32,6 @@
         <button class="navbar-toggler ml-auto pull-right" type="button" data-toggle="collapse"
                 data-target="#navbarCollapse">
             <i class="fas fa-stream" style="color: #17A5CD"></i>
-
 
         </button>
 
@@ -56,17 +57,74 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="custom-container">
-            <div class="card-deck cards-issue-container">
-                @foreach($magazine as $m)
-                <div class="card card-issue">
-                    <a href="/issue/{{$m->version_id}}"><img src="{{asset('storage/'.$m->image)}}" class="card-img-top" alt="{{$m->image_desc}}">
-                    </a>
-                </div>
+
+
+
+            <!--Carousel Wrapper-->
+            <div id="mySlider" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Indicators-->
+
+
+                <ol class="carousel-indicators" style="visibility: hidden">
+                    <?php $counter=0;?>
+                    @foreach($magazine as $m)
+                        <?php $counter++; if ($counter==1){?>
+                    <li data-target="#mySlider" data-slide-to="<?php echo $counter-1;?>" class="active"></li>
+                        <?php } else {?>
+                            <li data-target="#mySlider" data-slide-to="<?php echo $counter-1;?>"></li>
+                        <?php }?>
+                        @endforeach
+                </ol>
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <?php $counter=0;?>
+                    @foreach($magazine as $m)
+                        <?php $counter++; if ($counter==1){?>
+                    <div class="carousel-item active">
+                        <?php } else {?>
+                            <div class="carousel-item ">
+                        <?php }?>
+                        <div class="row">
+
+                            <div class="col-8 col-md-8 m-auto">
+                                <div class="card">
+
+                                    <a href=""><img  src="{{asset('storage/'.$m->image)}}" class="card-img-top" alt="{{$m->image_desc}}"
+                                         style="width:100%"> </a>
+                                    <div class="card-body">
+                                        <h4 class="card-title text-center">{{$m->image_desc}}</h4>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
                     @endforeach
+                    <!--first slide end -->
+
+
+
+                </div>
+                <!-- controls-->
+                <a class="carousel-control-prev" href="#mySlider" role="button" data-slide="prev">
+                    <span class="fa fa-angle-left" style="font-size:48px;"></span>
+                </a>
+                <a class="carousel-control-next" href="#mySlider" role="button" data-slide="next">
+                    <span class="fa fa-angle-right" style="font-size:48px;"></span>
+                </a>
             </div>
         </div>
+
     </div>
 </div>
+
 </div>
 <div class="row">
     <div class="col-lg-12">
