@@ -54,11 +54,11 @@
 <br>
 <br>
 <div class="row">
-    <div class="col-lg-12 col-md-12 col-sm-12">
-        <div class="contact-erea">
-            <div class="con-left-side w-75 text-center">
-                <div class="container">
-                    <div class="contact-talk">
+    <div class="contact-erea">
+        <div class=" col-md-9 col-sm-12 p-0">
+            <div class="con-left-side">
+                <div class="custom-container-form">
+                    <div class="contact-talk align-items-center">
                         <h1 class="contact-title">
                             CONTACT US !
                         </h1>
@@ -75,16 +75,16 @@
                         <form action="Contact-Us" method="post">
                             @csrf
                             <div class="form-group">
-                                <label for> Name </label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" name="name" maxlength="50">
+                                <label > Name </label>
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" name="name" maxlength="50" required>
                             </div>
                             <div class="form-group">
                                 <label >Email address</label>
-                                <input type="email" class="form-control"  aria-describedby="emailHelp" name="email" maxlength="75">
+                                <input type="email" class="form-control"  aria-describedby="emailHelp" name="email" maxlength="75" required>
                             </div>
                             <div class="form-group">
                                 <label >Message</label>
-                                <input type="text" class="form-control"  aria-describedby="emailHelp" name="message" maxlength="300">
+                                <input type="text" class="form-control"  aria-describedby="emailHelp" name="message" maxlength="300" required>
                             </div>
                             <div class="form--btn">
                                 <button type="submit" class="btn  btn-primary sub-btn">Submit</button>
@@ -93,7 +93,30 @@
                     </div>
                 </div>
             </div>
-            <div class="con-right-side w-25">
+        </div>
+        <div class=" col-md-3 col-sm-12 p-0">
+            <div class="con-right-side">
+                <div class="social-container">
+                    <div class="social-box">
+                        <div class="social-icons">
+                            <a href="https://web.facebook.com/acmju/">
+                                <div class="social rounded-circle fb ">
+                                    <i class="fab fa-facebook-f"></i>
+                                </div>
+                            </a> &nbsp;&nbsp;
+                            <a href="https://www.youtube.com/channel/UCQbgvi30eWG8pKmf4SPq_nQ/featured">
+                                <div class="social rounded-circle you">
+                                    <i class="fab fa-youtube "></i>
+                                </div>
+                            </a> &nbsp;&nbsp;
+                            <a href="https://www.instagram.com/acm_ju/">
+                                <div class="social rounded-circle ins">
+                                    <i class="fab fa-instagram "></i>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
