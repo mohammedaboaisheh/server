@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="942bada4-85dc-4859-a950-160e1ff1e4cd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AboutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/mycss.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/mycss.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/About-Us.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/About-Us.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/magazine.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/magazine.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -185,8 +180,16 @@
       <workItem from="1600691569483" duration="2018000" />
       <workItem from="1600693926979" duration="7235000" />
       <workItem from="1600702727972" duration="853000" />
-      <workItem from="1600771078517" duration="2796000" />
+      <workItem from="1600771078517" duration="3645000" />
     </task>
+    <task id="LOCAL-00001" summary="second commit">
+      <created>1600774132870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600774132870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,5 +205,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
 </project>
